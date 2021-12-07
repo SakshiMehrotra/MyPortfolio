@@ -7,13 +7,6 @@ http.createServer((req,res)=>{
         let data=fs.readFileSync('index.html');
         res.write(data);
     }
-    //else if(req.url==='/style'){
-        //et data=fs.readFileSync('');
-        //es.write(data);
-    /*else{
-        let data=fs.readFileSync('Website/error.html');
-        res.write(data);
-
-    }*/
+    
     res.end();
-}).listen(8080,()=>{console.log('server started at port 8080')});
+}).listen(process.env.PORT,()=>{console.log('server started at port 8080')});
